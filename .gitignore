@@ -1,52 +1,115 @@
-# Prerequisites
-*.d
+# Created by https:\\www.toptal.com\developers\gitignore\api\dotnetcore
+# Edit at https:\\www.toptal.com\developers\gitignore?templates=dotnetcore
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+### DotnetCore APPLICATION ###
+# .NET Core build folders
 
-# Linker output
-*.ilk
-*.map
-*.exp
+## # TEST
+## 
+/AppMktPlaceV2.Start.Test/bin/*
+/AppMktPlaceV2.Start.Test/obj/*
+/AppMktPlaceV2.Start.Test/bin
+/AppMktPlaceV2.Start.Test/obj
 
-# Precompiled Headers
-*.gch
-*.pch
+## NEW
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\bin\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\obj\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\bin
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\obj
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+## 
+## # DOMAIN
+## 
+/AppMktPlaceV2.Start.Domain/bin/*
+/AppMktPlaceV2.Start.Domain/obj/*
+/AppMktPlaceV2.Start.Domain/bin
+/AppMktPlaceV2.Start.Domain/obj
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+## NEW
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\bin\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\obj\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\bin
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\obj
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+## 
+## # INFRAESTRUTURE
+##
+/AppMktPlaceV2.Start.Infrastructure/obj
+/AppMktPlaceV2.Start.Infrastructure/obj/*
+/AppMktPlaceV2.Start.Infrastructure/obj/Debug
+/AppMktPlaceV2.Start.Infrastructure/obj/Debug/*
+/AppMktPlaceV2.Start.Infrastructure/bin
+/AppMktPlaceV2.Start.Infrastructure/bin/*
+/AppMktPlaceV2.Start.Infrastructure/bin/Debug
+/AppMktPlaceV2.Start.Infrastructure/bin/Debug/*
+
+
+## NEW
+
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\bin\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\obj\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\bin
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\obj
+
+
+## 
+## # API
+/AppMktPlaceV2.Start/bin/*
+/AppMktPlaceV2.Start/obj/*
+/AppMktPlaceV2.Start/bin
+/AppMktPlaceV2.Start/obj
+/AppMktPlaceV2.Start/obj/Debug/*
+/AppMktPlaceV2.Start/obj/Debug
+/AppMktPlaceV2.Start/SerilogStart/*
+/AppMktPlaceV2.Start/SerilogStart
+
+## NEW
+
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\bin\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\obj\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\bin
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\obj
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\SerilogStart\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\SerilogStart
+
+# Common project files
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\Migrations\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\Migrations
+
+## 
+## # APPLICATION
+/AppMktPlaceV2.Start.Application/bin/*
+/AppMktPlaceV2.Start.Application/obj/*
+/AppMktPlaceV2.Start.Application/bin
+/AppMktPlaceV2.Start.Application/obj
+/AppMktPlaceV2.Start.Application/SerilogStart/*
+/AppMktPlaceV2.Start.Application/SerilogStart
+
+## NEW
+
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\bin\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\obj\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\bin
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\obj
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\SerilogStart\*
+..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\SerilogStart
+
+# Common publish files
+/publish/*
+/setup.sql
+/.dockerignore
+/docker-compose.yml
+/deployment.yml
+/AppMktPlaceV2.Start/Dockerfile
+/entrypoint.sh
+
+# End of https:\www.toptal.com/developers/gitignore/api/dotnetcore
+
+### DotnetCore ROOT ###
+
+/.vscode/*
+/.vs/*
+/.vscode
+/.vs
