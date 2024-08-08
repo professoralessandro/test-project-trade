@@ -29,9 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AppMktPlaceV2.Start.Application\AppMktPlaceV2.Start.Application.csproj" />
-    <ProjectReference Include="..\AppMktPlaceV2.Start.Domain\AppMktPlaceV2.Start.Domain.csproj" />
-    <ProjectReference Include="..\AppMktPlaceV2.Start.Infrastructure\AppMktPlaceV2.Start.Infrastructure.csproj" />
+    <ProjectReference Include="..\AppMktPlaceV2.Start.Application\Test.Trade.Application.csproj" />
+    <ProjectReference Include="..\AppMktPlaceV2.Start.Domain\Test.Trade.Domain.csproj" />
+    <ProjectReference Include="..\AppMktPlaceV2.Start.Infrastructure\Test.Trade.Infra.csproj" />
   </ItemGroup>
 
 </Project>

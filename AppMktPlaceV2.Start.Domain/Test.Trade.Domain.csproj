@@ -9,11 +9,12 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.0" />
     <PackageReference Include="Dapper" Version="2.1.35" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AppMktPlaceV2.Start.Domain\AppMktPlaceV2.Start.Domain.csproj" />
+    <ProjectReference Include="..\AppMktPlaceV2.Start.Application\Test.Trade.Application.csproj" />
   </ItemGroup>
 
 </Project>
