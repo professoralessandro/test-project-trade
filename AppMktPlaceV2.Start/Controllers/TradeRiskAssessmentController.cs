@@ -1,11 +1,8 @@
 ﻿#region IMPORTS
 using AutoMapper;
-using Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Claims;
 using Test.Trade.Api.Controllers.Common;
 using Test.Trade.Application.Dtos.Trade.Request;
 using Test.Trade.Application.Dtos.Trade.Response;
@@ -57,8 +54,8 @@ namespace Test.Trade.Api.Controllers
         [HttpGet, Route("get-all-paginated-by-parameter")]
         public async Task<ActionResult<TradeResponseDto>> GetAllTradesByParameter(
                 [FromQuery] Guid? tradeId,
-                [FromQuery] string clientSector,
-                [FromQuery] string clientRisk,
+                [FromQuery] string? clientSector,
+                [FromQuery] string? clientRisk,
                 [FromQuery] int? pageNumber,
                 [FromQuery] int? rowspPage
             )
@@ -138,11 +135,11 @@ namespace Test.Trade.Api.Controllers
 
         #region DELETE
         [HttpDelete]
-        public async Task<ActionResult> Delete(Guid Id)
+        public async Task<ActionResult> Delete(TradeDeleteRequestDto trade)
         {
             try
             {
-                await _service.DeleteAsync(Id);
+                await _service.DeleteAsync(trade);
                 Serilog.Log.Information("Operation completed successfully");
                 return Ok();
             }

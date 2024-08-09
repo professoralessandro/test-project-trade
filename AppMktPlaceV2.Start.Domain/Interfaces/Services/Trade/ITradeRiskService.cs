@@ -28,7 +28,7 @@ namespace Test.Trade.Domain.Interfaces.Services.Trade
         #endregion
 
         #region DELETE SERVIÇO DE DELETE
-        Task DeleteAsync(Guid tradeId);
+        Task DeleteAsync(TradeDeleteRequestDto trade);
         #endregion
     }
 }

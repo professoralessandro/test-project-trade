@@ -1,4 +1,8 @@
-﻿namespace Test.Trade.Domain.Interfaces.Repository.Trade
+﻿#region REFERENCE
+using Test.Trade.Application.Dtos.Trade.Request;
+#endregion REFERENCE
+
+namespace Test.Trade.Domain.Interfaces.Repository.Trade
 {
     public interface ITradeRiskRepository
     {
@@ -20,14 +24,20 @@
 
         #region INSERT
         Task AddAsync(Entities.Trade obj);
+
+        Task<Test.Trade.Domain.Entities.Trade> AddAsync(TradeRegisterRequestDto obj);
         #endregion
 
         #region UPDATE
         Task UpdateAsync(Entities.Trade obj);
+
+        Task<Test.Trade.Domain.Entities.Trade> UpdateAsync(TradeUpdateRequestDto obj);
         #endregion
 
         #region DELETE
-        Task RemoveAsync(Entities.Trade obj);
+        Task RemoveAsync(Entities.Trade model);
+
+        Task RemoveAsync(TradeDeleteRequestDto tradeId);
         #endregion
     }
 }

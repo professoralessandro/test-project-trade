@@ -89,12 +89,7 @@ namespace Test.Trade.Domain.Servies.Trade
         {
             try
             {
-                var trade = _mapper.Map<TradeRegisterRequestDto, Entities.Trade>(model.TrasnformObjectPropValueToUpper());
-
-                trade.DateRegistered = DateTime.Now;
-                trade.ClientRisk = AssessTradeRisk(model.Value, model.ClientSector);
-
-                await _repository.AddAsync(trade);
+                var trade = await _repository.AddAsync(model.TrasnformObjectPropValueToUpper());
 
                 return trade;
             }
@@ -114,14 +109,13 @@ namespace Test.Trade.Domain.Servies.Trade
         {
             try
             {
+                #region VALIDATION
                 var trade = await _repository.GetByIdAsync(model.TradeId);
 
                 if (trade == null) throw new ValidationException("Houve um erro ao buscar o registro desejado!");
+                #endregion VALIDATION
 
-                trade.DateUpdated = DateTime.Now;
-                trade.ClientRisk = AssessTradeRisk(model.Value, model.ClientSector);
-
-                await _repository.UpdateAsync(trade);
+                trade = await _repository.UpdateAsync(model.TrasnformObjectPropValueToUpper());
 
                 return trade;
             }
@@ -137,13 +131,17 @@ namespace Test.Trade.Domain.Servies.Trade
         #endregion
 
         #region DELETE
-        public async Task DeleteAsync(Guid tradeId)
+        public async Task DeleteAsync(TradeDeleteRequestDto trade)
         {
             try
             {
-                var userFromDB = await _repository.GetByIdAsync(tradeId);
+                #region VALIDATION
+                var tradeFromDB = await _repository.GetByIdAsync(trade.TradeId);
 
-                await _repository.RemoveAsync(userFromDB);
+                if (tradeFromDB == null) throw new ValidationException("Houve um erro ao buscar o registro desejado!");
+                #endregion VALIDATION
+
+                await _repository.RemoveAsync(trade);
             }
             catch (ValidationException ex)
             {
