@@ -1,12 +1,12 @@
 ﻿#region ATRIBUTTES
 using AppMktPlaceV2.Application.Dtos;
-using AppMktPlaceV2.Start.Business.Entities;
+using Test.Trade.Business.Entities;
 using AppMktPlaceV2.Application.Helper.Statics.Generic;
-using AppMktPlaceV2.Start.Business.Interfaces.Services.User;
+using Test.Trade.Business.Interfaces.Services.User;
 using System.ComponentModel.DataAnnotations;
 #endregion
 
-namespace AppMktPlaceV2.Start.Business.Business.User
+namespace Test.Trade.Business.Business.User
 {
     public static class UserValdation
     {

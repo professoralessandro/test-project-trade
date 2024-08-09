@@ -12,7 +12,7 @@
 2024-08-08 17:18:02.511 -03:00 [ERR] Failed executing DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 SELECT [t].[TradeId], [t].[ClientRisk], [t].[ClientSector], [t].[DateRegistered], [t].[DateUpdated], [t].[UserRegistered], [t].[UserUpdated], [t].[Value]
 FROM [Trades] AS [t]
-2024-08-08 17:18:02.557 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'AppMktPlaceV2.Start.Domain.Context.SQLServer.AppDbContext'.
+2024-08-08 17:18:02.557 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Test.Trade.Domain.Context.SQLServer.AppDbContext'.
 Microsoft.Data.SqlClient.SqlException (0x80131904): Nome de objeto 'Trades' inválido.
    at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
    at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
@@ -55,8 +55,8 @@ Nome de objeto 'Trades' inválido.
 --------------------------------------------------------------------------------------------------------
 
 System.Exception: Não foi possível realizar a busca por registros: Nome de objeto 'Trades' inválido.
-   at AppMktPlaceV2.Start.Domain.Servies.Trade.TradeRiskService.GetAllAsync() in C:\project\AppMktPlace\Start - Copia\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 85
-   at AppMktPlaceV2.Start.Api.Controllers.TradeRiskAssessmentController.GetAllTrades() in C:\project\AppMktPlace\Start - Copia\AppMktPlaceV2.Start\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 106
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.GetAllAsync() in C:\project\AppMktPlace\Start - Copia\Test.Trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 85
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTrades() in C:\project\AppMktPlace\Start - Copia\Test.Trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 106
 2024-08-08 17:19:19.172 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-08 17:19:29.515 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-08 17:19:36.373 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.

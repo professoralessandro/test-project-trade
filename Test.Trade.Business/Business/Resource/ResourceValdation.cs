@@ -1,8 +1,8 @@
 ﻿using AppMktPlaceV2.Application.Dtos;
-using AppMktPlaceV2.Start.Business.Entities;
-using AppMktPlaceV2.Start.Business.Interfaces.Services.Resource;
+using Test.Trade.Business.Entities;
+using Test.Trade.Business.Interfaces.Services.Resource;
 
-namespace AppMktPlaceV2.Start.Business.Business.Resource
+namespace Test.Trade.Business.Business.Resource
 {
     public static class ResourceValdation
     {

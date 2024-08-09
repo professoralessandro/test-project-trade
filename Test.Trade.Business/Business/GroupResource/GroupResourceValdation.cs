@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Business.Business.GroupResource
+﻿namespace Test.Trade.Business.Business.GroupResource
 {
     public static class GroupResourceValdation
     {

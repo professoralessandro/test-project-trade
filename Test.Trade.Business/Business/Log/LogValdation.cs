@@ -1,7 +1,7 @@
 ﻿using AppMktPlaceV2.Domain.Interfaces.Services.Log;
-using AppMktPlaceV2.Start.Application.Dtos.Log;
+using Test.Trade.Application.Dtos.Log;
 
-namespace AppMktPlaceV2.Start.Business.Business.Log
+namespace Test.Trade.Business.Business.Log
 {
     public static class LogValdation
     {

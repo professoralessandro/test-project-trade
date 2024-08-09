@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Business.Business.Group
+﻿namespace Test.Trade.Business.Business.Group
 {
     public static class GroupValdation
     {

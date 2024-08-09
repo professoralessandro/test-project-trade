@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "AppMktPlaceV2.Start.Api": {
+    "Test.Trade.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

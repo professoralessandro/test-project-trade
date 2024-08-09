@@ -9,10 +9,10 @@
 2024-08-09 08:46:01.416 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 08:46:47.284 -03:00 [ERR] Error to validate user
 System.ComponentModel.DataAnnotations.ValidationException: Error to validate user
-   at AppMktPlaceV2.Start.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 122
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 122
 2024-08-09 08:47:16.668 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 08:47:21.652 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
-2024-08-09 08:48:28.025 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppMktPlaceV2.Start.Domain.Context.SQLServer.AppDbContext'.
+2024-08-09 08:48:28.025 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'Test.Trade.Domain.Context.SQLServer.AppDbContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A conversão de um tipo de dados datetime2 em um tipo de dados datetime resultou em um valor fora do intervalo.
    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -69,9 +69,9 @@ Error Number:242,State:3,Class:16
    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
 2024-08-09 08:48:43.037 -03:00 [ERR] Houve um erro ao incluir registro: An error occurred while saving the entity changes. See the inner exception for details.
 System.Exception: Houve um erro ao incluir registro: An error occurred while saving the entity changes. See the inner exception for details.
-   at AppMktPlaceV2.Start.Domain.Servies.Trade.TradeRiskService.UpdateAsync(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 133
-   at AppMktPlaceV2.Start.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 122
-2024-08-09 08:49:09.627 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppMktPlaceV2.Start.Domain.Context.SQLServer.AppDbContext'.
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.UpdateAsync(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 133
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 122
+2024-08-09 08:49:09.627 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'Test.Trade.Domain.Context.SQLServer.AppDbContext'.
 Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
  ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A conversão de um tipo de dados datetime2 em um tipo de dados datetime resultou em um valor fora do intervalo.
    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
@@ -136,8 +136,8 @@ Error Number:242,State:3,Class:16
 2024-08-09 08:58:05.898 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 08:58:57.538 -03:00 [ERR] Operation ERROR
 System.Exception: Houve um erro ao buscar o registro desejado!Trade not found
-   at AppMktPlaceV2.Start.Domain.Servies.Trade.TradeRiskService.GetByIdAsync(Guid tradeId) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 41
-   at AppMktPlaceV2.Start.Api.Controllers.TradeRiskAssessmentController.GetById(Guid UserId) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 41
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.GetByIdAsync(Guid tradeId) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 41
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetById(Guid UserId) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 41
 2024-08-09 09:05:39.171 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 09:08:54.609 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 10:02:01.482 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
@@ -151,8 +151,8 @@ System.Exception: Houve um erro ao buscar o registro desejado!Trade not found
 --------------------------------------------------------------------------------------------------------
 
 System.Exception: Houve um erro ao buscar o registro desejado!É necessário declarar a variável escalar "@Id".
-   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 55
-   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 65
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 55
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 65
 2024-08-09 10:35:55.655 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 10:36:02.493 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 10:36:03.066 -03:00 [ERR] 
@@ -162,8 +162,8 @@ System.Exception: Houve um erro ao buscar o registro desejado!É necessário dec
 --------------------------------------------------------------------------------------------------------
 
 System.Exception: Houve um erro ao buscar o registro desejado!É necessário declarar a variável escalar "@Id".
-   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 55
-   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 65
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 55
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 65
 2024-08-09 10:37:22.215 -03:00 [ERR] 
 --------------------------------------------------------------------------------------------------------
  Message:        ERROR => Host terminated unexpectedly
@@ -171,19 +171,21 @@ System.Exception: Houve um erro ao buscar o registro desejado!É necessário dec
 --------------------------------------------------------------------------------------------------------
 
 System.Exception: Houve um erro ao buscar o registro desejado!É necessário declarar a variável escalar "@Id".
-   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 55
-   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 65
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.ReturnListWithParametersPaginated(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 55
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetAllTradesByParameter(Nullable`1 tradeId, String clientSector, String clientRisk, Nullable`1 pageNumber, Nullable`1 rowspPage) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 65
 2024-08-09 10:37:54.836 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 10:38:04.213 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 10:40:49.914 -03:00 [ERR] Houve um erro ao incluir registro: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
 System.Exception: Houve um erro ao incluir registro: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
-   at Test.Trade.Domain.Servies.Trade.TradeRiskService.UpdateAsync(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 128
-   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 119
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.UpdateAsync(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 128
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.Update(TradeUpdateRequestDto model) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 119
 2024-08-09 10:41:35.423 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 10:41:43.729 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 10:43:28.850 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
 2024-08-09 10:43:52.538 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.
 2024-08-09 10:45:03.959 -03:00 [ERR] Operation ERROR
 System.Exception: Houve um erro ao buscar o registro desejado!Trade not found
-   at Test.Trade.Domain.Servies.Trade.TradeRiskService.GetByIdAsync(Guid tradeId) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start.Domain\Servies\Trade\TradeRiskService.cs:line 41
-   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetById(Guid UserId) in C:\project\AppMktPlace\test trade\test-project-trade\AppMktPlaceV2.Start\Controllers\TradeRiskAssessmentController.cs:line 38
+   at Test.Trade.Domain.Servies.Trade.TradeRiskService.GetByIdAsync(Guid tradeId) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade.Domain\Servies\Trade\TradeRiskService.cs:line 41
+   at Test.Trade.Api.Controllers.TradeRiskAssessmentController.GetById(Guid UserId) in C:\project\AppMktPlace\test trade\test-project-trade\Test.Trade\Controllers\TradeRiskAssessmentController.cs:line 38
+2024-08-09 10:54:00.434 -03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-08-09 10:54:06.660 -03:00 [WRN] 'AddEntityFramework*' was called on the service provider, but 'UseInternalServiceProvider' wasn't called in the DbContext options configuration. Consider removing the 'AddEntityFramework*' call, as in most cases it's not needed and may cause conflicts with other products and services registered in the same service provider.

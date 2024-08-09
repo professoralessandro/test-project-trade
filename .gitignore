@@ -6,95 +6,95 @@
 
 ## # TEST
 ## 
-/AppMktPlaceV2.Start.Test/bin/*
-/AppMktPlaceV2.Start.Test/obj/*
-/AppMktPlaceV2.Start.Test/bin
-/AppMktPlaceV2.Start.Test/obj
+/Test.Trade.Test/bin/*
+/Test.Trade.Test/obj/*
+/Test.Trade.Test/bin
+/Test.Trade.Test/obj
 
 ## NEW
 
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\bin\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\obj\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\bin
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Test\obj
+..\Test.Trade\Test.Trade.Test\bin\*
+..\Test.Trade\Test.Trade.Test\obj\*
+..\Test.Trade\Test.Trade.Test\bin
+..\Test.Trade\Test.Trade.Test\obj
 
 ## 
 ## # DOMAIN
 ## 
-/AppMktPlaceV2.Start.Domain/bin/*
-/AppMktPlaceV2.Start.Domain/obj/*
-/AppMktPlaceV2.Start.Domain/bin
-/AppMktPlaceV2.Start.Domain/obj
+/Test.Trade.Domain/bin/*
+/Test.Trade.Domain/obj/*
+/Test.Trade.Domain/bin
+/Test.Trade.Domain/obj
 
 ## NEW
 
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\bin\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\obj\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\bin
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Domain\obj
+..\Test.Trade\Test.Trade.Domain\bin\*
+..\Test.Trade\Test.Trade.Domain\obj\*
+..\Test.Trade\Test.Trade.Domain\bin
+..\Test.Trade\Test.Trade.Domain\obj
 
 ## 
 ## # INFRAESTRUTURE
 ##
-/AppMktPlaceV2.Start.Infrastructure/obj
-/AppMktPlaceV2.Start.Infrastructure/obj/*
-/AppMktPlaceV2.Start.Infrastructure/obj/Debug
-/AppMktPlaceV2.Start.Infrastructure/obj/Debug/*
-/AppMktPlaceV2.Start.Infrastructure/bin
-/AppMktPlaceV2.Start.Infrastructure/bin/*
-/AppMktPlaceV2.Start.Infrastructure/bin/Debug
-/AppMktPlaceV2.Start.Infrastructure/bin/Debug/*
+/Test.Trade.Infrastructure/obj
+/Test.Trade.Infrastructure/obj/*
+/Test.Trade.Infrastructure/obj/Debug
+/Test.Trade.Infrastructure/obj/Debug/*
+/Test.Trade.Infrastructure/bin
+/Test.Trade.Infrastructure/bin/*
+/Test.Trade.Infrastructure/bin/Debug
+/Test.Trade.Infrastructure/bin/Debug/*
 
 
 ## NEW
 
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\bin\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\obj\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\bin
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Infrastructure\obj
+..\Test.Trade\Test.Trade.Infrastructure\bin\*
+..\Test.Trade\Test.Trade.Infrastructure\obj\*
+..\Test.Trade\Test.Trade.Infrastructure\bin
+..\Test.Trade\Test.Trade.Infrastructure\obj
 
 
 ## 
 ## # API
-/AppMktPlaceV2.Start/bin/*
-/AppMktPlaceV2.Start/obj/*
-/AppMktPlaceV2.Start/bin
-/AppMktPlaceV2.Start/obj
-/AppMktPlaceV2.Start/obj/Debug/*
-/AppMktPlaceV2.Start/obj/Debug
-/AppMktPlaceV2.Start/SerilogStart/*
-/AppMktPlaceV2.Start/SerilogStart
+/Test.Trade/bin/*
+/Test.Trade/obj/*
+/Test.Trade/bin
+/Test.Trade/obj
+/Test.Trade/obj/Debug/*
+/Test.Trade/obj/Debug
+/Test.Trade/SerilogStart/*
+/Test.Trade/SerilogStart
 
 ## NEW
 
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\bin\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\obj\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\bin
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\obj
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\SerilogStart\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\SerilogStart
+..\Test.Trade\Test.Trade\bin\*
+..\Test.Trade\Test.Trade\obj\*
+..\Test.Trade\Test.Trade\bin
+..\Test.Trade\Test.Trade\obj
+..\Test.Trade\Test.Trade\SerilogStart\*
+..\Test.Trade\Test.Trade\SerilogStart
 
 # Common project files
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\Migrations\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start\Migrations
+..\Test.Trade\Test.Trade\Migrations\*
+..\Test.Trade\Test.Trade\Migrations
 
 ## 
 ## # APPLICATION
-/AppMktPlaceV2.Start.Application/bin/*
-/AppMktPlaceV2.Start.Application/obj/*
-/AppMktPlaceV2.Start.Application/bin
-/AppMktPlaceV2.Start.Application/obj
-/AppMktPlaceV2.Start.Application/SerilogStart/*
-/AppMktPlaceV2.Start.Application/SerilogStart
+/Test.Trade.Application/bin/*
+/Test.Trade.Application/obj/*
+/Test.Trade.Application/bin
+/Test.Trade.Application/obj
+/Test.Trade.Application/SerilogStart/*
+/Test.Trade.Application/SerilogStart
 
 ## NEW
 
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\bin\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\obj\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\bin
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\obj
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\SerilogStart\*
-..\AppMktPlaceV2.Start\AppMktPlaceV2.Start.Application\SerilogStart
+..\Test.Trade\Test.Trade.Application\bin\*
+..\Test.Trade\Test.Trade.Application\obj\*
+..\Test.Trade\Test.Trade.Application\bin
+..\Test.Trade\Test.Trade.Application\obj
+..\Test.Trade\Test.Trade.Application\SerilogStart\*
+..\Test.Trade\Test.Trade.Application\SerilogStart
 
 # Common publish files
 /publish/*
@@ -102,7 +102,7 @@
 /.dockerignore
 /docker-compose.yml
 /deployment.yml
-/AppMktPlaceV2.Start/Dockerfile
+/Test.Trade/Dockerfile
 /entrypoint.sh
 
 # End of https:\www.toptal.com/developers/gitignore/api/dotnetcore
