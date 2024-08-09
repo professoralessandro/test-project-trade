@@ -15,6 +15,9 @@ namespace AppMktPlaceV2.Start.Infrastructure.Mappers
             CreateMap<TradeResponseDto, Trade>()
             .ReverseMap();
 
+            CreateMap<TradeUpdateRequestDto, Trade>()
+            .ReverseMap();
+
             CreateMap<TradeRegisterRequestDto, Trade>()
              .ReverseMap();
             #endregion TRADE

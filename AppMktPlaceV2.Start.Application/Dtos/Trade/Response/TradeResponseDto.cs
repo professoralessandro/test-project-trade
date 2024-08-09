@@ -10,10 +10,6 @@
 
         public string? ClientRisk { get; set; }
 
-        public Guid UserRegistered { get; set; }
-
-        public Guid? UserUpdated { get; set; }
-
         public DateTime DateRegistered { get; set; }
 
         public DateTime? DateUpdated { get; set; }

@@ -20,11 +20,11 @@ namespace AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade
         #endregion
 
         #region INSERT
-        Task<string> InsertAsync(TradeRegisterRequestDto model);
+        Task<AppMktPlaceV2.Start.Domain.Entities.Trade> InsertAsync(TradeRegisterRequestDto model);
         #endregion
 
         #region UPDATE
-        Task<string> UpdateAsync(TradeRegisterRequestDto model);
+        Task<AppMktPlaceV2.Start.Domain.Entities.Trade> UpdateAsync(TradeUpdateRequestDto model);
         #endregion
 
         #region DELETE SERVIÇO DE DELETE

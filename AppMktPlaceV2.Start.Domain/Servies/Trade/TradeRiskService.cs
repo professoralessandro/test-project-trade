@@ -85,19 +85,18 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
         #endregion
 
         #region INSERT
-        public async Task<string> InsertAsync(TradeRegisterRequestDto model)
+        public async Task<AppMktPlaceV2.Start.Domain.Entities.Trade> InsertAsync(TradeRegisterRequestDto model)
         {
             try
             {
+                var trade = _mapper.Map<TradeRegisterRequestDto, AppMktPlaceV2.Start.Domain.Entities.Trade>(model.TrasnformObjectPropValueToUpper());
 
-                var resultDto = _mapper.Map<TradeRegisterRequestDto, AppMktPlaceV2.Start.Domain.Entities.Trade>(model.TrasnformObjectPropValueToUpper());
+                trade.DateRegistered = DateTime.Now;
+                trade.ClientRisk = AssessTradeRisk(model.Value, model.ClientSector);
 
-                resultDto.DateRegistered = DateTime.Now;
-                resultDto.ClientRisk = AssessTradeRisk(model);
+                await _repository.AddAsync(trade);
 
-                await _repository.AddAsync(resultDto);
-
-                return resultDto.ClientRisk;
+                return trade;
             }
             catch (ValidationException ex)
             {
@@ -111,19 +110,20 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
         #endregion
 
         #region UPDATE
-        public async Task<string> UpdateAsync(TradeRegisterRequestDto model)
+        public async Task<AppMktPlaceV2.Start.Domain.Entities.Trade> UpdateAsync(TradeUpdateRequestDto model)
         {
             try
             {
+                var trade = await _repository.GetByIdAsync(model.TradeId);
 
-                var trade = _mapper.Map<TradeRegisterRequestDto, AppMktPlaceV2.Start.Domain.Entities.Trade>(model.TrasnformObjectPropValueToUpper());
+                if (trade == null) throw new ValidationException("Houve um erro ao buscar o registro desejado!");
 
                 trade.DateUpdated = DateTime.Now;
-                trade.ClientRisk = AssessTradeRisk(model);
+                trade.ClientRisk = AssessTradeRisk(model.Value, model.ClientSector);
 
                 await _repository.UpdateAsync(trade);
 
-                return trade.ClientRisk;
+                return trade;
             }
             catch (ValidationException ex)
             {
@@ -157,17 +157,17 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
         #endregion
 
         #region PRIVATE METHOD
-        private string AssessTradeRisk(TradeRegisterRequestDto trade)
+        private string AssessTradeRisk(int value, string clientSector)
         {
-            if (trade.Value < 1000000 && trade.ClientSector == "Public")
+            if (value < 1000000 && clientSector.ToUpper() == "Public".ToUpper())
             {
                 return "LOWRISK";
             }
-            else if (trade.Value > 1000000 && trade.ClientSector == "Public")
+            else if (value > 1000000 && clientSector.ToUpper() == "Public".ToUpper())
             {
                 return "MEDIUMRISK";
             }
-            else if (trade.Value > 1000000 && trade.ClientSector == "Private")
+            else if (value > 1000000 && clientSector.ToUpper() == "Private".ToUpper())
             {
                 return "HIGHRISK";
             }

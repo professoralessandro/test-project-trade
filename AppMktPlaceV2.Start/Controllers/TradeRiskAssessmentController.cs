@@ -5,6 +5,7 @@ using AppMktPlaceV2.Start.Application.Dtos.Trade.Response;
 using AppMktPlaceV2.Start.Application.Helper.Static.Generic;
 using AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade;
 using AutoMapper;
+using Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
@@ -28,27 +29,6 @@ namespace AppMktPlaceV2.Start.Api.Controllers
             _mapper = mapper;
         }
         #endregion CONTRUCTORS
-
-        #region REGISTER
-        [HttpPost("register"), AllowAnonymous]
-        public async Task<IActionResult> Registeruser([FromBody] TradeRegisterRequestDto userObj)
-        {
-            try
-            {
-                var result =  await _service.InsertAsync(userObj);
-
-                return Ok(new
-                {
-                    Risk = result
-                });
-            }
-            catch (Exception ex)
-            {
-                Serilog.Log.Error(ex, UtilHelper.FormatLogInformationMessage(message: "ERROR => Host terminated unexpectedly", userId: Guid.Parse("d2a833de-5bb4-4931-a3c2-133c8994072a")));
-                return BadRequest(ex.Message);
-            }
-        }
-        #endregion REGISTER
 
         #region GET BY ID
         [HttpGet, Route("GetById"), OutputCache]
@@ -111,19 +91,40 @@ namespace AppMktPlaceV2.Start.Api.Controllers
         }
         #endregion GET ALL
 
-        #region UPDATE
-        [HttpPut]
-        public async Task<ActionResult<TradeResponseDto>> Update(TradeRegisterRequestDto model)
+        #region REGISTER
+        [HttpPost("register"), AllowAnonymous]
+        public async Task<IActionResult> Registeruser([FromBody] TradeRegisterRequestDto userObj)
         {
             try
             {
-                if (!Guid.TryParse(this.Request.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.PrimarySid)?.Value, out Guid userId)) throw new ValidationException("Error to validate user");
+                var result = await _service.InsertAsync(userObj);
 
+                return Ok(new
+                {
+                    Risk = result.ClientRisk,
+                    Identifier = result.TradeId
+                });
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Error(ex, UtilHelper.FormatLogInformationMessage(message: "ERROR => Host terminated unexpectedly", userId: Guid.Parse("d2a833de-5bb4-4931-a3c2-133c8994072a")));
+                return BadRequest(ex.Message);
+            }
+        }
+        #endregion REGISTER
+
+        #region UPDATE
+        [HttpPut]
+        public async Task<ActionResult<TradeResponseDto>> Update(TradeUpdateRequestDto model)
+        {
+            try
+            {
                 var response = await _service.UpdateAsync(model);
                 Serilog.Log.Information("Operation completed successfully");
                 return Ok(new
                 {
-                    Risk = response
+                    Risk = response.ClientRisk,
+                    Identifier = response.TradeId
                 });
             }
             catch (Exception ex)
