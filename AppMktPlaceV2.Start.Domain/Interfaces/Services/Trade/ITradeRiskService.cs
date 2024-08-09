@@ -1,9 +1,9 @@
 ﻿#region IMPORTS
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Request;
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Response;
+using Test.Trade.Application.Dtos.Trade.Request;
+using Test.Trade.Application.Dtos.Trade.Response;
 #endregion IMPORTS
 
-namespace AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade
+namespace Test.Trade.Domain.Interfaces.Services.Trade
 {
     public interface ITradeRiskService
     {
@@ -20,11 +20,11 @@ namespace AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade
         #endregion
 
         #region INSERT
-        Task<AppMktPlaceV2.Start.Domain.Entities.Trade> InsertAsync(TradeRegisterRequestDto model);
+        Task<Entities.Trade> InsertAsync(TradeRegisterRequestDto model);
         #endregion
 
         #region UPDATE
-        Task<AppMktPlaceV2.Start.Domain.Entities.Trade> UpdateAsync(TradeUpdateRequestDto model);
+        Task<Entities.Trade> UpdateAsync(TradeUpdateRequestDto model);
         #endregion
 
         #region DELETE SERVIÇO DE DELETE

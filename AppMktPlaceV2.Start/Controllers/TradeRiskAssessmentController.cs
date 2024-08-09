@@ -1,9 +1,4 @@
 ﻿#region IMPORTS
-using AppMktPlaceV2.Start.Api.Controllers.Common;
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Request;
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Response;
-using AppMktPlaceV2.Start.Application.Helper.Static.Generic;
-using AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade;
 using AutoMapper;
 using Azure;
 using Microsoft.AspNetCore.Authorization;
@@ -11,9 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
+using Test.Trade.Api.Controllers.Common;
+using Test.Trade.Application.Dtos.Trade.Request;
+using Test.Trade.Application.Dtos.Trade.Response;
+using Test.Trade.Application.Helper.Static.Generic;
+using Test.Trade.Domain.Interfaces.Services.Trade;
 #endregion IMPORTS
 
-namespace AppMktPlaceV2.Start.Api.Controllers
+namespace Test.Trade.Api.Controllers
 {
     public class TradeRiskAssessmentController : CommonController
     {
@@ -57,8 +57,8 @@ namespace AppMktPlaceV2.Start.Api.Controllers
         [HttpGet, Route("get-all-paginated-by-parameter")]
         public async Task<ActionResult<TradeResponseDto>> GetAllTradesByParameter(
                 [FromQuery] Guid? tradeId,
-                [FromQuery] string? clientSector,
-                [FromQuery] string? clientRisk,
+                [FromQuery] string clientSector,
+                [FromQuery] string clientRisk,
                 [FromQuery] int? pageNumber,
                 [FromQuery] int? rowspPage
             )
@@ -129,7 +129,7 @@ namespace AppMktPlaceV2.Start.Api.Controllers
             }
             catch (Exception ex)
             {
-                this.Response.StatusCode = 422;
+                Response.StatusCode = 422;
                 Serilog.Log.Error(ex, ex.Message);
                 return UnprocessableEntity(ex.Message);
             }
@@ -148,7 +148,7 @@ namespace AppMktPlaceV2.Start.Api.Controllers
             }
             catch (Exception ex)
             {
-                this.Response.StatusCode = 422;
+                Response.StatusCode = 422;
                 Serilog.Log.Error(ex, ex.Message);
                 return UnprocessableEntity(ex.Message);
             }

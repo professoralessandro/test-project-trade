@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Domain.Interfaces.Repository.Base
+﻿namespace Test.Trade.Domain.Interfaces.Repository.Base
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

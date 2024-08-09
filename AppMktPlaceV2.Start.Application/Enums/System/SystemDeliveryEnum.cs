@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Application.Enums
+﻿namespace Test.Trade.Application.Enums.System
 {
     public static class SystemDeliveryEnum
     {

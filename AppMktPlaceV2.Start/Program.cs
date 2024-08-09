@@ -1,11 +1,4 @@
 #region REFERENCES
-using AppMktPlaceV2.Start.Application.Helper.Static.Serilog;
-using AppMktPlaceV2.Start.Application.Helper.Static.Generic;
-using AppMktPlaceV2.Start.Application.Helper.Static.Settings;
-using AppMktPlaceV2.Start.Application.Helper.Static.Settings.Jtw;
-using AppMktPlaceV2.Start.Domain.Context.SQLServer;
-using AppMktPlaceV2.Start.Infrastructure.Arquiteture.ServicesInjection;
-using AppMktPlaceV2.Start.Infrastructure.Mappers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -13,6 +6,13 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using System.Text;
+using Test.Trade.Application.Helper.Static.Settings;
+using Test.Trade.Application.Helper.Static.Serilog;
+using Test.Trade.Application.Helper.Static.Settings.Jtw;
+using Test.Trade.Application.Helper.Static.Generic;
+using Test.Trade.Infra.Mappers;
+using Test.Trade.Infra.Arquiteture.ServicesInjection;
+using Test.Trade.Domain.Context.SQLServer;
 #endregion REFERENCES
 
 #region TRY CATCH

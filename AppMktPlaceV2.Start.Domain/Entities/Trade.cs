@@ -1,10 +1,9 @@
 ﻿#region REFERENCES
-using AppMktPlaceV2.Start.Application.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 #endregion REFERENCES
 
-namespace AppMktPlaceV2.Start.Domain.Entities
+namespace Test.Trade.Domain.Entities
 {
     [Table("Trade")]
     public partial class Trade

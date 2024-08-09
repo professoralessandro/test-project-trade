@@ -6,7 +6,7 @@ using Serilog.Exceptions;
 using Microsoft.Extensions.Configuration;
 #endregion IMPORT
 
-namespace AppMktPlaceV2.Start.Application.Helper.Static.Serilog
+namespace Test.Trade.Application.Helper.Static.Serilog
 {
     public static class SerilogExtension
     {

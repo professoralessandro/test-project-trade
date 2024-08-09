@@ -1,10 +1,10 @@
 ﻿#region ATRIBUTTES
-using AppMktPlaceV2.Start.Application.Helper.Static.Settings;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using Test.Trade.Application.Helper.Static.Settings;
 #endregion
 
-namespace AppMktPlaceV2.Start.Domain.Connector
+namespace Test.Trade.Domain.Connector
 {
     public class APConnector
     {

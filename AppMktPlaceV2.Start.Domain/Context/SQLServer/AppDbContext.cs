@@ -1,10 +1,8 @@
 ﻿#region IMPORT
 using Microsoft.EntityFrameworkCore;
-using AppMktPlaceV2.Start.Domain.Entities;
-using AppMktPlaceV2.Start.Domain.Entities;
 #endregion IMPORT
 
-namespace AppMktPlaceV2.Start.Domain.Context.SQLServer
+namespace Test.Trade.Domain.Context.SQLServer
 {
     public partial class AppDbContext : DbContext
     {
@@ -20,13 +18,13 @@ namespace AppMktPlaceV2.Start.Domain.Context.SQLServer
         #endregion CONTRUTORES
 
         #region DBCONTEXT
-        public DbSet<Trade> Trades { get; set; }
+        public DbSet<Test.Trade.Domain.Entities.Trade> Trades { get; set; }
         #endregion DBCONTEXT
 
         #region METHODS
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Trade>(entity =>
+            modelBuilder.Entity<Test.Trade.Domain.Entities.Trade>(entity =>
             {
                 entity.HasKey(e => e.TradeId);
 
@@ -34,7 +32,7 @@ namespace AppMktPlaceV2.Start.Domain.Context.SQLServer
 
                 entity.Property(e => e.DateUpdated);
 
-                entity.Property(e => e. ClientSector)
+                entity.Property(e => e.ClientSector)
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);

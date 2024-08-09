@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Application.Helper.Static.Settings
+﻿namespace Test.Trade.Application.Helper.Static.Settings
 {
     public class RumtimeSettings
     {

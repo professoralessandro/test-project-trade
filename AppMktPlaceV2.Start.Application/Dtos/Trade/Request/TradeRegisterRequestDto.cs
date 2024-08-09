@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Application.Dtos.Trade.Request
+﻿namespace Test.Trade.Application.Dtos.Trade.Request
 {
     public class TradeRegisterRequestDto
     {

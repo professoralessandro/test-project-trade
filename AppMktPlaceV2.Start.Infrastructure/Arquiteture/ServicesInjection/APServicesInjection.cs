@@ -1,16 +1,16 @@
 ﻿#region REFERENCES
-using AppMktPlaceV2.Start.Infrastructure.Arquiteture.RepositoryInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Http;
 using Microsoft.Extensions.DependencyInjection;
-using AppMktPlaceV2.Start.Domain.Connector;
-using AppMktPlaceV2.Start.Domain.Interfaces.Data;
-using AppMktPlaceV2.Start.Domain.Interfaces.Common;
-using AppMktPlaceV2.Start.Domain.Servies.Trade;
-using AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade;
+using Test.Trade.Infra.Arquiteture.RepositoryInjection;
+using Test.Trade.Domain.Interfaces.Data;
+using Test.Trade.Domain.Interfaces.Common;
+using Test.Trade.Domain.Connector;
+using Test.Trade.Domain.Interfaces.Services.Trade;
+using Test.Trade.Domain.Servies.Trade;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Arquiteture.ServicesInjection
+namespace Test.Trade.Infra.Arquiteture.ServicesInjection
 {
     public static class APServicesInjection
     {

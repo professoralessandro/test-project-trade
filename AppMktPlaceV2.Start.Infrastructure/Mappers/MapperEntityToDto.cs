@@ -1,22 +1,21 @@
 ﻿#region IMPORTS
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Request;
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Response;
-using AppMktPlaceV2.Start.Domain.Entities;
 using AutoMapper;
+using Test.Trade.Application.Dtos.Trade.Request;
+using Test.Trade.Application.Dtos.Trade.Response;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Mappers
+namespace Test.Trade.Infra.Mappers
 {
     public class MapperEntityToDto : Profile
     {
         public MapperEntityToDto()
         {
             #region TRADE
-            CreateMap<Trade, TradeRegisterRequestDto>();
+            CreateMap<Test.Trade.Domain.Entities.Trade, TradeRegisterRequestDto>();
 
-            CreateMap<Trade, TradeUpdateRequestDto>();
+            CreateMap<Test.Trade.Domain.Entities.Trade, TradeUpdateRequestDto>();
 
-            CreateMap<Trade, TradeResponseDto>()
+            CreateMap<Test.Trade.Domain.Entities.Trade, TradeResponseDto>()
              .ReverseMap();
             #endregion TRADE
         }

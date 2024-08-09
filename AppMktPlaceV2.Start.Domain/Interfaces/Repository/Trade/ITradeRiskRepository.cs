@@ -1,9 +1,9 @@
-﻿namespace AppMktPlaceV2.Start.Domain.Interfaces.Repository.Trade
+﻿namespace Test.Trade.Domain.Interfaces.Repository.Trade
 {
     public interface ITradeRiskRepository
     {
         #region FIND BY ID
-        Task<AppMktPlaceV2.Start.Domain.Entities.Trade> GetByIdAsync(Guid id);
+        Task<Entities.Trade> GetByIdAsync(Guid id);
         #endregion
 
         #region RETURN LIST WITH PARAMETERS PAGINATED
@@ -15,19 +15,19 @@
         #endregion
 
         #region GET ALL
-        Task<IEnumerable<AppMktPlaceV2.Start.Domain.Entities.Trade>> GetAllAsync();
+        Task<IEnumerable<Entities.Trade>> GetAllAsync();
         #endregion
 
         #region INSERT
-        Task AddAsync(AppMktPlaceV2.Start.Domain.Entities.Trade obj);
+        Task AddAsync(Entities.Trade obj);
         #endregion
 
         #region UPDATE
-        Task UpdateAsync(AppMktPlaceV2.Start.Domain.Entities.Trade obj);
+        Task UpdateAsync(Entities.Trade obj);
         #endregion
 
         #region DELETE
-        Task RemoveAsync(AppMktPlaceV2.Start.Domain.Entities.Trade obj);
+        Task RemoveAsync(Entities.Trade obj);
         #endregion
     }
 }

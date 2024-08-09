@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Domain.Interfaces.Data
+﻿namespace Test.Trade.Domain.Interfaces.Data
 {
     public interface IAPDWork
     {

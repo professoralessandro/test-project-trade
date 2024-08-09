@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Domain.Interfaces.Common
+﻿namespace Test.Trade.Domain.Interfaces.Common
 {
     public interface IService
     {

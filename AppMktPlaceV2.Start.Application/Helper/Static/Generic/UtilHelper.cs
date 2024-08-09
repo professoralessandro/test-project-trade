@@ -7,7 +7,7 @@ using Microsoft.Security.Application;
 using Microsoft.AspNetCore.Http;
 #endregion IMPORT
 
-namespace AppMktPlaceV2.Start.Application.Helper.Static.Generic
+namespace Test.Trade.Application.Helper.Static.Generic
 {
     public static class UtilHelper
     {

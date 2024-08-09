@@ -1,6 +1,6 @@
-﻿using AppMktPlaceV2.Start.Domain.Interfaces.Data;
+﻿using Test.Trade.Domain.Interfaces.Data;
 
-namespace AppMktPlaceV2.Start.Domain.Connector
+namespace Test.Trade.Domain.Connector
 {
     public class APWork : IAPDWork
     {

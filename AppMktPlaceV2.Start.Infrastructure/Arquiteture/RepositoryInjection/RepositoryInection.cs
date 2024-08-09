@@ -1,10 +1,10 @@
 ﻿#region REFERENCES
-using AppMktPlaceV2.Start.Domain.Interfaces.Repository.Trade;
-using AppMktPlaceV2.Start.Infrastructure.Repositorys.User;
 using Microsoft.Extensions.DependencyInjection;
+using Test.Trade.Domain.Interfaces.Repository.Trade;
+using Test.Trade.Infra.Repositorys.Trade;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Arquiteture.RepositoryInjection
+namespace Test.Trade.Infra.Arquiteture.RepositoryInjection
 {
     public static class RepositoryInection
     {

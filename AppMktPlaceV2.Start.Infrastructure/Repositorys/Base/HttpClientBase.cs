@@ -2,10 +2,10 @@
 using System.Collections.Specialized;
 using System.Net.Http;
 using System.Net.Http.Json;
-using AppMktPlaceV2.Start.Domain.Interfaces.Repository.Base;
+using Test.Trade.Domain.Interfaces.Repository.Base;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Repositorys.Base
+namespace Test.Trade.Infra.Repositorys.Base
 {
     public class HttpClientBase<TEntity> : IDisposable, IHttpClientBase
     {

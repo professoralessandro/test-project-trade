@@ -1,12 +1,12 @@
 ﻿#region IMPORTS
-using AppMktPlaceV2.Start.Domain.Connector;
-using AppMktPlaceV2.Start.Domain.Context.SQLServer;
-using AppMktPlaceV2.Start.Domain.Interfaces.Repository.Base;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
+using Test.Trade.Domain.Connector;
+using Test.Trade.Domain.Context.SQLServer;
+using Test.Trade.Domain.Interfaces.Repository.Base;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Repositorys.Base
+namespace Test.Trade.Infra.Repositorys.Base
 {
     public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {

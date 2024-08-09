@@ -1,16 +1,15 @@
 ﻿#region ATRIBUTTES
-using AppMktPlaceV2.Start.Infrastructure.Repositorys.Base;
-using AppMktPlaceV2.Start.Application.Helper.Static.Generic;
-using AppMktPlaceV2.Start.Domain.Context.SQLServer;
-using AppMktPlaceV2.Start.Domain.Entities;
 using Dapper;
-using AppMktPlaceV2.Start.Domain.Connector;
-using AppMktPlaceV2.Start.Domain.Interfaces.Repository.Trade;
+using Test.Trade.Application.Helper.Static.Generic;
+using Test.Trade.Infra.Repositorys.Base;
+using Test.Trade.Domain.Interfaces.Repository.Trade;
+using Test.Trade.Domain.Connector;
+using Test.Trade.Domain.Context.SQLServer;
 #endregion
 
-namespace AppMktPlaceV2.Start.Infrastructure.Repositorys.User
+namespace Test.Trade.Infra.Repositorys.Trade
 {
-    public class TradeRiskRepository : RepositoryBase<Trade>, ITradeRiskRepository
+    public class TradeRiskRepository : RepositoryBase<Test.Trade.Domain.Entities.Trade>, ITradeRiskRepository
     {
         #region CONSTRUCTOR
         public TradeRiskRepository(AppDbContext context, APConnector session) : base(context, session)
@@ -33,7 +32,7 @@ namespace AppMktPlaceV2.Start.Infrastructure.Repositorys.User
 
             var storedProcedure = "[dbo].[ReturnTradePaginated] @Id, @ClientSector, @ClientRisc, @PageNumber, @RowspPage";
 
-            return await this.ReturnListFromQueryAsync<T>(storedProcedure, parameters);
+            return await ReturnListFromQueryAsync<T>(storedProcedure, parameters);
         }
         #endregion
 
@@ -48,7 +47,7 @@ namespace AppMktPlaceV2.Start.Infrastructure.Repositorys.User
 
             var storedProcedure = $@"[seg].[ReturnUsersToSelect] @Param, @PageNumber,@RowspPage";
 
-            return await this.ReturnListFromQueryAsync<T>(storedProcedure, parameters);
+            return await ReturnListFromQueryAsync<T>(storedProcedure, parameters);
         }
         #endregion
     }

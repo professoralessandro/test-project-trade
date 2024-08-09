@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Application.Enums.System
+﻿namespace Test.Trade.Application.Enums.System
 {
     public static class MasterDBObjEnum
     {

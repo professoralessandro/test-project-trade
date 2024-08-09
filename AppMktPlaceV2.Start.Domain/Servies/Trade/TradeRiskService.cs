@@ -1,14 +1,14 @@
 ﻿#region IMPORT
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Request;
-using AppMktPlaceV2.Start.Application.Dtos.Trade.Response;
-using AppMktPlaceV2.Start.Application.Helper.Static.Generic;
-using AppMktPlaceV2.Start.Domain.Interfaces.Repository.Trade;
-using AppMktPlaceV2.Start.Domain.Interfaces.Services.Trade;
 using AutoMapper;
 using System.ComponentModel.DataAnnotations;
+using Test.Trade.Application.Dtos.Trade.Request;
+using Test.Trade.Application.Dtos.Trade.Response;
+using Test.Trade.Application.Helper.Static.Generic;
+using Test.Trade.Domain.Interfaces.Repository.Trade;
+using Test.Trade.Domain.Interfaces.Services.Trade;
 #endregion IMPORT
 
-namespace AppMktPlaceV2.Start.Domain.Servies.Trade
+namespace Test.Trade.Domain.Servies.Trade
 {
     public class TradeRiskService : ITradeRiskService
     {
@@ -34,7 +34,7 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
 
                 if (trade == null) throw new Exception("Trade not found");
 
-                return _mapper.Map<AppMktPlaceV2.Start.Domain.Entities.Trade, TradeResponseDto>(trade);
+                return _mapper.Map<Entities.Trade, TradeResponseDto>(trade);
             }
             catch (Exception ex)
             {
@@ -71,7 +71,7 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
 
                 if (result == null) throw new Exception("Trade not found");
 
-                return _mapper.Map<IEnumerable<AppMktPlaceV2.Start.Domain.Entities.Trade>, IEnumerable<TradeResponseDto>>(result);
+                return _mapper.Map<IEnumerable<Entities.Trade>, IEnumerable<TradeResponseDto>>(result);
             }
             catch (Exception ex)
             {
@@ -85,11 +85,11 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
         #endregion
 
         #region INSERT
-        public async Task<AppMktPlaceV2.Start.Domain.Entities.Trade> InsertAsync(TradeRegisterRequestDto model)
+        public async Task<Entities.Trade> InsertAsync(TradeRegisterRequestDto model)
         {
             try
             {
-                var trade = _mapper.Map<TradeRegisterRequestDto, AppMktPlaceV2.Start.Domain.Entities.Trade>(model.TrasnformObjectPropValueToUpper());
+                var trade = _mapper.Map<TradeRegisterRequestDto, Entities.Trade>(model.TrasnformObjectPropValueToUpper());
 
                 trade.DateRegistered = DateTime.Now;
                 trade.ClientRisk = AssessTradeRisk(model.Value, model.ClientSector);
@@ -110,7 +110,7 @@ namespace AppMktPlaceV2.Start.Domain.Servies.Trade
         #endregion
 
         #region UPDATE
-        public async Task<AppMktPlaceV2.Start.Domain.Entities.Trade> UpdateAsync(TradeUpdateRequestDto model)
+        public async Task<Entities.Trade> UpdateAsync(TradeUpdateRequestDto model)
         {
             try
             {

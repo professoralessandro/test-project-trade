@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
-namespace AppMktPlaceV2.Start.Api.Middleware
+namespace Test.Trade.Api.Middleware
 {
     public class APClainsAuthotization
     {

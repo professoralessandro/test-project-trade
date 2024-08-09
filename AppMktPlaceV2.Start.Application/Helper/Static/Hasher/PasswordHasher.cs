@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace AppMktPlaceV2.Start.Application.Helper.Static.Hasher
+namespace Test.Trade.Application.Helper.Static.Hasher
 {
     public class PasswordHasher
     {

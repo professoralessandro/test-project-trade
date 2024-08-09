@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Application.Enums
+﻿namespace Test.Trade.Application.Enums
 {
     public static class GroupDbEnum
     {

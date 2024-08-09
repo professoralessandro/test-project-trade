@@ -1,4 +1,4 @@
-﻿namespace AppMktPlaceV2.Start.Application.Models.Dtos
+﻿namespace Test.Trade.Application.Dtos
 {
     public class TokenApiDto
     {
